@@ -1,6 +1,6 @@
 # Hover Converter
 
-### A simple extension which allows you to convert Hex and Decimal values to their corresponding Binary, Hex or Decimal values by just hovering over them.
+ A simple Visual Studio Code Extension which allows you to convert Hex and Decimal values to their corresponding Binary, Hex or Decimal values by just hovering over them.
 
 ## Usage
 --------
@@ -19,7 +19,7 @@
 
 -------
 
-### The following formats are supported currently
+### The following formats are currently supported 
 
 * `Hex : 0xFF`
 * `Hex : FFh`
@@ -30,3 +30,7 @@
 ### 0.0.1
 
 Initial release of Hover Converter
+
+
+#### Credits
+Icons taken from [Freepik](https://www.flaticon.com/authors/freepik)
