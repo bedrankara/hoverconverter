@@ -8,7 +8,7 @@
 	"homepage": "https://github.com/bedrankara/hoverconverter",
 	"icon": "logo.png",
 	"engines": {
-		"vscode": "^1.34.0"
+		"vscode": "^1.43.0"
 	},
 	"categories": [
 		"Programming Languages", "Other"
