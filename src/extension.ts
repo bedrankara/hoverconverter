@@ -3,22 +3,18 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-
 	var regexHex = /^0x[0-9a-fA-F]+$/g;
 	var regexHexc = /^[0-9a-fA-F]+[h]$/g;
 	var regexDec = /^-?[0-9]+$/g;
-	var regexBin = /^[01]+$/g;
-	var regexBinc = /^0b[01]+$/g;
-//000100
-//0x22
+	var regexBin = /^0b[01]+$/g;
 	let hover = vscode.languages.registerHoverProvider({ scheme: '*', language: '*' }, {
 		provideHover(document, position, token) {
 			var hoveredWord = document.getText(document.getWordRangeAtPosition(position));
 			var markdownString = new vscode.MarkdownString();
 			if (regexBin.test(hoveredWord.toString())) {
 
-				var input: Number = Number(parseInt(hoveredWord, 2).toString());
-				markdownString.appendCodeblock(`Orig: ${hoveredWord}\nDec:\n${parseInt(hoveredWord, 2)}\nHex:\n0x${input.toString(16).toUpperCase()} `, 'javascript');
+				var input: Number = Number(parseInt(hoveredWord.substring(2), 2).toString());
+				markdownString.appendCodeblock(`Dec:\n${input}\nHex:\n0x${input.toString(16).toUpperCase()} `, 'javascript');
 
 				return {
 					contents: [markdownString]
@@ -32,7 +28,6 @@ export function activate(context: vscode.ExtensionContext) {
 					contents: [markdownString]
 				};
 			}
-
 			else if (regexDec.test(hoveredWord.toString())) {
 
 				var input: Number = Number(hoveredWord.toString());
