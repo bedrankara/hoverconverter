@@ -2,7 +2,7 @@
 	"name": "hoverconverter",
 	"displayName": "Hover Converter",
 	"description": "Hover over Hex or Decimal values to quickly get their corresponding values in Binary, Hex or Decimal.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "bedrankara",
 	"repository": "https://github.com/bedrankara/hoverconverter",
 	"homepage": "https://github.com/bedrankara/hoverconverter",
