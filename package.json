@@ -2,7 +2,7 @@
 	"name": "hoverconverter",
 	"displayName": "Hover Converter",
 	"description": "Hover over Hex or Decimal values to quickly get their corresponding values in Binary, Hex or Decimal.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "bedrankara",
 	"repository": "https://github.com/bedrankara/hoverconverter",
 	"homepage": "https://github.com/bedrankara/hoverconverter",
@@ -11,26 +11,23 @@
 		"vscode": "^1.43.0"
 	},
 	"categories": [
-		"Programming Languages", "Other"
+		"Programming Languages",
+		"Other"
 	],
 	"keywords": [
-		"Converter","Hover","Hex", "Decimal", "Hover Converter"
+		"Converter",
+		"Hover",
+		"Hex",
+		"Binary",
+		"Decimal",
+		"Hover Converter"
 	],
 	"activationEvents": [
-		"onCommand:extension.enableHoverconverter"
+		"onStartupFinished"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
-		"commands": [
-			{
-				"command": "extension.enableHoverconverter",
-				"title": "Hover Converter: Enable Extension"
-			},
-			{
-				"command": "extension.disableHoverconverter",
-				"title": "Hover Converter: Disable Extension "
-			}
-		]
+		
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
@@ -45,12 +42,12 @@
 		"@types/mocha": "^7.0.1",
 		"@types/node": "^12.11.7",
 		"@types/vscode": "^1.43.0",
-		"eslint": "^6.8.0",
-		"@typescript-eslint/parser": "^2.18.0",
 		"@typescript-eslint/eslint-plugin": "^2.18.0",
+		"@typescript-eslint/parser": "^2.18.0",
+		"eslint": "^6.8.0",
 		"glob": "^7.1.6",
 		"mocha": "^7.0.1",
-		"typescript": "^3.7.5",
+		"typescript": "^3.9.7",
 		"vscode-test": "^1.3.0"
 	}
 }
